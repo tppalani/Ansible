@@ -1,10 +1,10 @@
 - name: Deploy a mysql DB
-  hosts: db_server
+  hosts: target1
   roles:
     - python
     - mysql_db
 - name: Deploy a Web Server
-  hosts: web_server
+  hosts: target2
   roles:
     - python
     - flask_web
