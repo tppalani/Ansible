@@ -1,5 +1,6 @@
 - hosts: target1
   gather_facts: False
+  become: true
   vars_prompt:
     - name: "some_firstlastname"
       private: no
