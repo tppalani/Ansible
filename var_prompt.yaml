@@ -3,7 +3,7 @@
   hosts: target1
   tasks:
      -name: Create User
-     user:
+      user:
        name: devops
        groups: "{{ admin_group }}"
        create_home: true
