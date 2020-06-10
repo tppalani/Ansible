@@ -4,17 +4,15 @@
     - name: "some_firstlastname"
       private: no
       prompt: "Enter the user's first & last name"
-
     - name: "some_username"
-        private: no
-        prompt: "Enter the user's of the user"
-
+      private: no
+      prompt: "Enter the user's of the user"
     - name: "some_password"
-        private: yes
-        prompt: "Enter the user password"
-        encrypt: "sha512_crypt"
-        confirm: yes
-        slat_size: 7
+      private: yes
+      prompt: "Enter the user password"
+      encrypt: "sha512_crypt"
+      confirm: yes
+      slat_size: 7
   tasks:
     - name: Adding the user "{{ some_firstlastname }}"
       user:
