@@ -1,0 +1,8 @@
+- name: clone the git repo from Github
+  hosts: target1 
+  tasks: 
+  - name: clone repo
+    git:
+      #repo: https://tppalani:Dell@160385@github.com/tppalani/Ansible.git 
+       repo: https://github.com/tppalani/Ansible.git
+       dest: /home/osboxes/Ansible_Project/web_deployment/ 
