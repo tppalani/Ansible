@@ -2,7 +2,7 @@
 - name: Installing and Configuring Web Server on target node
   # Hosts Section
   hosts:
-    - target1
+    - target2
   become: yes
   # Variable Section
   vars:
