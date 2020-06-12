@@ -7,5 +7,6 @@
       user:
         name: bob
         state: present
-        password: "{{ default_user_password | password_hash('sha512') }}"
+        #password: "{{ default_user_password | password_hash('sha512') }}"
+        password: "{{ 'Password1' | password_hash('sha512','A512') }}"
         shell: /bin/bash
