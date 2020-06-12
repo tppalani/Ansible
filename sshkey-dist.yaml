@@ -1,0 +1,9 @@
+---
+- name: Distrubite the key to remote hosts
+  hosts: target1
+  tasks:
+    - name: Install public key
+      authorized_key:
+        user: root
+        state: present
+        key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"

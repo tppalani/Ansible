@@ -9,3 +9,4 @@ default_user_password: password
 # id
 # exit
 # ansible-playbook --vault-id @prompt delete-users.yaml
+# ansible all --list-hosts
