@@ -12,7 +12,7 @@
     - name: Installing Apache Web Server
       apt:
         update_cache: yes
-        name: apache
+        name: apache2
         state: latest
     - name: Copying the index.html file
       copy:
@@ -20,7 +20,7 @@
         dest: /var/www/html/
     - name: Start the service
       service:
-        name: apache
+        name: apache2
         state: started
         enabled: yes
     - name: Changing the apache web server port number
@@ -31,11 +31,11 @@
         line: 'Listen {{ http_port }}'
       when: http_port is defined
       notify:
-        - Restart Apache
+        - restart apache2
 
   # Handlers Section
   handlers:
-    - name: Restart Apache
+    - name: restart apache2
       service:
-        name: apache
+        name: apache2
         state: restarted
