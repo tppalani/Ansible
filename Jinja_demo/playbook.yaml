@@ -33,15 +33,15 @@
       src: index.j2
       dest: /var/www/html/index.html
 
-  - name: Changing the apache web server port number
-    lineinfile:
-      path: /etc/httpd/conf/httpd.conf
-      regexp: '^Listen '
-      insertafter: '^#Listen '
-      line: 'Listen {{ http_port }}'
-    when: http_port is defined
-    notify:
-    - Restart Apache
+  #- name: Changing the apache web server port number
+   # lineinfile:
+    #  path: /etc/httpd/conf/httpd.conf
+     # regexp: '^Listen '
+      #insertafter: '^#Listen '
+      #line: 'Listen {{ http_port }}'
+    #when: http_port is defined
+    #notify:
+    #- Restart Apache
 
     # Setting up Nginx Server
   - name: Add Repository nginx-release
