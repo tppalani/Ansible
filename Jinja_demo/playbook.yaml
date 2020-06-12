@@ -1,14 +1,14 @@
 ---
 - name: Installing and Configuring Web Server on target node
-  # Hosts Sectionn
+  # Hosts Section
   hosts:
-  - target2
+  - target
   become: yes
   # Variable Section
   vars:
     http_port: 8080
     nginx_package_url: http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-{{ansible_distribution_major_version}}-0.el{{ansible_distribution_major_version}}.ngx.noarch.rpm
-    node_ip: 192.168.0.3
+    node_ip: 192.168.100.101
     greeting: 'Ansible is awesome!'
   # Tasks Section
   tasks:
