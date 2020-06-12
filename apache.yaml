@@ -23,15 +23,15 @@
         name: apache2
         state: started
         enabled: yes
-    - name: Changing the apache web server port number
-      lineinfile:
-        path: /etc/httpd/conf/httpd.conf
-        regexp: '^Listen '
-        insertafter: '^#Listen '
-        line: 'Listen {{ http_port }}'
-      when: http_port is defined
-      notify:
-        - restart apache2
+    #- name: Changing the apache web server port number
+    #  lineinfile:
+     #   path: /etc/httpd/conf/httpd.conf
+      #  regexp: '^Listen '
+       # insertafter: '^#Listen '
+        #line: 'Listen {{ http_port }}'
+      #when: http_port is defined
+      #notify:
+       # - restart apache2
 
   # Handlers Section
   handlers:
