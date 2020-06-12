@@ -8,6 +8,6 @@
   tasks:
     - name: "Create user accounts and add users to groups"
       user:
-        name: "{{ item }}"
+        name: "{{ item }}" state=present
         group: admin
       with_items: "{{ users }}"
