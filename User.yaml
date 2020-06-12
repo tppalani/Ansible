@@ -1,0 +1,13 @@
+---
+- hosts: "all"
+  connection: "local"
+  vars:
+    users:
+    - tharmeka
+    - nandhu
+  tasks:
+  - name: "Create user accounts and add users to groups"
+    user:
+      name: "{{ item }}"
+      group: admin
+      with_items: "{{ users }}"

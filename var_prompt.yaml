@@ -12,13 +12,13 @@
         password:
     - name: Install SSH Key
       authorized_key:
-         user: devops
-         state: present
-         manage_dir: true
-         key: "{{ lookup('file', '/home/osboxes/.ssh/id_rsa.pub') }}"
+        user: devops
+        state: present
+        manage_dir: true
+        key: "{{ lookup('file', '/home/osboxes/.ssh/id_rsa.pub') }}"
 
     - name: Setup Devops Sudo Access
       copy:
-         dest: /etc/sudoers.d/devops
-         content: 'devops ALL=(ALL) NOPASSWD: ALL'
-         validate: /usr/sbin/visudo -cf %s
+        dest: /etc/sudoers.d/devops
+        content: 'devops ALL=(ALL) NOPASSWD: ALL'
+        validate: /usr/sbin/visudo -cf %s
