@@ -14,10 +14,10 @@
         update_cache: yes
         name: apache2
         state: latest
-    #- name: Copying the index.html file
-    #  copy:
-     #   src: index.html
-      #  dest: /var/www/html/
+    - name: Copying the index.html file
+      copy:
+        src: index.html
+        dest: /var/www/html/
     - name: Start the service
       service:
         name: apache2
