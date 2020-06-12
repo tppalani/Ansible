@@ -10,4 +10,4 @@
       user:
         name: "{{ item }}"
         group: admin
-        with_items: "{{ users }}"
+      with_items: "{{ users }}"
