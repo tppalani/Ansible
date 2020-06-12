@@ -3,6 +3,10 @@
   hosts: target1
   gather_facts: false
   tasks:
+    - name: Create group Task
+      group:
+        name: devops
+        state: present
     - name: Create Users Task
       user:
         name: "{{ item }}"
