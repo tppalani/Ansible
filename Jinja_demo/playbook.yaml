@@ -1,6 +1,6 @@
 ---
 - name: Installing and Configuring Web Server on target node
-  # Hosts Section
+  # Hosts Sectionn
   hosts:
   - target2
   become: yes
