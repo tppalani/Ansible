@@ -1,0 +1,11 @@
+admin_group: sudo
+default_user_password: password
+
+# Commands
+# ansible-vault encrypt groups_vars/centos.yaml
+# ansible-vault view groups_vars/centos.yaml
+# ansible-playbook --vault-id @prompt create-users.yaml
+# ssh user_name@ip-address
+# id
+# exit
+# ansible-playbook --vault-id @prompt delete-users.yaml

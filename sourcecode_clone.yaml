@@ -1,5 +1,6 @@
 - name: clone the git repo from Github
-  hosts: target1 
+  hosts: target1
+  become
   tasks: 
   - name: clone repo
     git:
