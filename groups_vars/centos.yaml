@@ -10,3 +10,4 @@ default_user_password: password
 # exit
 # ansible-playbook --vault-id @prompt delete-users.yaml
 # ansible all --list-hosts
+# less /etc/group | grep devops
