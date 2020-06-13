@@ -9,4 +9,4 @@
         state: present
         password: "{{ 'password' | password_hash('sha512','A512') }}"
         shell: /bin/bash
-        group: "{{ admin_group }}"
+        #group: "{{ admin_group }}"
