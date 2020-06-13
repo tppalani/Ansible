@@ -1,4 +1,4 @@
-admin_group: sudo
+admin_group: development
 default_user_password: password
 
 # Commands

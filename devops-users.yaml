@@ -5,19 +5,19 @@
     - name: Create Devops User
       user:
         name: devops
-        groups: "{{ devops }}"
+        groups: "{{ admin_group }}"
         append: true
         create_home: true
-        comment: "Ansible Management Account"
+        comment: 'Ansible Management Account'
         expires: -1
-        password: "{{ 'Password1' | password_hash('sha512','A512') }}"
+        password: '$6$AZ$tfbOH9FsYkG9EkUfU6Ms7qvQM7Jlv5hbWlfaZ4BLkUFUPWalAFW12L3cioXyrWMkmNAyjxC9tCMBiTubILv3F/'
 
     - name: Deploy Local User SSH Key
       authorized_key:
         user: devops
         state: present
         manage_dir: true
-        key: "{{ lookup('file', '/home/tux/.ssh/id_rsa.pub') }}"
+        key: "{{ lookup('file', '/home/osboxes/.ssh/id_rsa.pub') }}"
 
     - name: Setup Sudo Access for Devops User
       copy:
