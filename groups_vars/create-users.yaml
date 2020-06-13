@@ -5,13 +5,7 @@
   tasks:
     - name: Create Users Task
       user:
-        name: "{{ item }}"
+        name: tom
         state: present
         password: "{{ 'default_user_password' | password_hash('sha512','A512') }}"
         shell: /bin/bash
-        groups: "{{ admin_group }}"
-      loop:
-        - bob
-        - wendy
-        - lofty
-        - dizzy
