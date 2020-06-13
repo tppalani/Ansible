@@ -4,7 +4,7 @@
   tasks:
     - name: Create Devops User
       user:
-        name: devops
+        name: osboxes
         groups: "{{ admin_group }}"
         append: true
         create_home: true
