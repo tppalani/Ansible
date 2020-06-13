@@ -1,2 +1,2 @@
-admin: admin_group
-password: Dell@123
+admin_group: admin
+default_user_password: Password1
