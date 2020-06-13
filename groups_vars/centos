@@ -11,3 +11,13 @@ default_user_password: Password1
 # ansible-playbook --vault-id @prompt delete-users.yaml
 # ansible all --list-hosts
 # less /etc/group | grep devops
+# sudo deluser --remove-home userNameHere
+# id userNameHere
+# grep '^userNameHere' /etc/passwd
+
+# List all the groups & users
+    # compgen -g
+    # compgen -u
+
+# Delete the group
+    # groupdel group-name-here
