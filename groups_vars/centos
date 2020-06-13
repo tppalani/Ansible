@@ -1,5 +1,5 @@
 admin_group: development
-default_user_password: Password1
+default_user_password: Benq
 
 # Commands
 # ansible-vault encrypt groups_vars/centos.yaml
