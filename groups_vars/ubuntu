@@ -1,2 +1,2 @@
-admin_group: wheel
+admin_group: root
 default_user_password: Dell@160386
