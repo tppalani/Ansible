@@ -1,4 +1,4 @@
-admin_group: devops
+admin_group: sudo
 default_user_password: Password1
 
 # Commands
