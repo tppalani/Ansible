@@ -1,4 +1,4 @@
-admin_group: development
+admin_group: devops
 default_user_password: Password1
 
 # Commands
