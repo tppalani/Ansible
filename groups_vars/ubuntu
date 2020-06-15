@@ -1,2 +1,4 @@
 admin_group: admin
+developer_group: users
+default_group_password: Password1
 default_user_password: Password1

@@ -1,0 +1,27 @@
+---
+- name:  Create Users
+  hosts: target1
+  gather_facts: false
+  #vars_files: users.yaml
+  tasks:
+    - name: Create Users
+      user:
+        name: devops
+        groups: "{{ admin_group }}"
+        create_home: true
+        comment: 'Ansible User Management Account'
+        expires: -1
+        password: '$6$AZ$tfbOH9FsYkG9EkUfU6Ms7qvQM7Jlv5hbWlfaZ4BLkUFUPWalAFW12L3cioXyrWMkmNAyjxC9tCMBiTubILv3F/'
+
+    - name: Setup | authorized key upload
+        authorized_key:
+          user={{ item }}
+          state: present
+          manage_dir: true
+          key="{{ lookup('file', '/home/osboxes/.ssh/id_rsa.pub') }}"
+
+    - name: Sudo Access
+      copy:
+        dest: /etc/sudoers.d/devops
+        content: 'devops ALL=(ALL) NOPASSWORD: ALL'
+        validate: /usr/sbin/visudo -cf %s
